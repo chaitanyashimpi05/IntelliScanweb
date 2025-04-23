@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliScan - AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IntelliScan - AI Resume Analyzer</h1>
+        <form id="resumeForm" enctype="multipart/form-data">
+            <label for="job_role">Select Job Role:</label>
+            <select id="job_role" name="job_role">
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="Marketing">Marketing</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+                <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+            </select>
+
+            <label for="resume">Upload Resume (PDF/DOCX):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .docx">
+
+            <button type="submit">Analyze Resume</button>
+        </form>
+
+        <div id="results">
+            <h2>Analysis Result:</h2>
+            <p id="matched_skills"></p>
+            <p id="missing_skills"></p>
+            <a id="download_report" href="#" style="display:none;">Download Report</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
